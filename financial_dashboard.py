@@ -325,7 +325,7 @@ with st.spinner('Chargement des données SMI...'):
     if not smi_df.empty:
         display_df = smi_df[['Ticker', 'Nom', 'Prix', 'Variation (%)']].copy()
         st.dataframe(
-            display_df.style.applymap(color_negative_red, subset=['Variation (%)']),
+            display_df.style.map(color_negative_red, subset=['Variation (%)']),
             use_container_width=True,
             height=400
         )
@@ -341,7 +341,7 @@ with st.spinner('Chargement des données Eurostoxx 50...'):
     if not eurostoxx_df.empty:
         display_df = eurostoxx_df[['Ticker', 'Nom', 'Prix', 'Variation (%)']].copy()
         st.dataframe(
-            display_df.style.applymap(color_negative_red, subset=['Variation (%)']),
+            display_df.style.map(color_negative_red, subset=['Variation (%)']),
             use_container_width=True,
             height=400
         )
@@ -357,7 +357,7 @@ with st.spinner('Chargement des données Nasdaq...'):
     if not nasdaq_df.empty:
         display_df = nasdaq_df[['Ticker', 'Nom', 'Prix', 'Volume', 'Variation (%)']].copy()
         st.dataframe(
-            display_df.style.applymap(color_negative_red, subset=['Variation (%)']),
+            display_df.style.map(color_negative_red, subset=['Variation (%)']),
             use_container_width=True,
             height=500
         )
@@ -373,7 +373,7 @@ with st.spinner('Chargement des indices majeurs...'):
     if not indices_df.empty:
         display_df = indices_df[['Indice', 'Valeur', 'Var. 1J (%)', 'Var. YTD (%)']].copy()
         st.dataframe(
-            display_df.style.applymap(color_negative_red, subset=['Var. 1J (%)', 'Var. YTD (%)']),
+            display_df.style.map(color_negative_red, subset=['Var. 1J (%)', 'Var. YTD (%)']),
             use_container_width=True,
             height=400
         )
@@ -389,7 +389,7 @@ with st.spinner('Chargement des taux de change...'):
     if not fx_df.empty:
         display_df = fx_df[['Paire', 'Taux', 'Var. 1J (%)', 'Var. 1M (%)']].copy()
         st.dataframe(
-            display_df.style.applymap(color_negative_red, subset=['Var. 1J (%)', 'Var. 1M (%)']),
+            display_df.style.map(color_negative_red, subset=['Var. 1J (%)', 'Var. 1M (%)']),
             use_container_width=True,
             height=200
         )
@@ -405,7 +405,7 @@ with st.spinner('Chargement des données crypto...'):
     if not crypto_df.empty:
         display_df = crypto_df[['Crypto', 'Ticker', 'Prix (USD)', 'Var. 24h (%)', 'Var. 7J (%)']].copy()
         st.dataframe(
-            display_df.style.applymap(color_negative_red, subset=['Var. 24h (%)', 'Var. 7J (%)']),
+            display_df.style.map(color_negative_red, subset=['Var. 24h (%)', 'Var. 7J (%)']),
             use_container_width=True,
             height=400
         )
